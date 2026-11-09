@@ -98,13 +98,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header #logo h1 {
-  font-size: 34px;
+  font-size: 26px;
   margin: 0;
   padding: 0;
   line-height: 1;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 }
 
 #header #logo h1 a, #header #logo h1 a:hover {
@@ -114,17 +114,53 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header #logo img {
+  width: 125px;
+  height: 60px;
   padding: 0;
   margin: 0;
 }
 
 @media (max-width: 768px) {
   #header #logo h1 {
-    font-size: 28px;
+    font-size: 20px;
+    letter-spacing: 0;
   }
   #header #logo img {
     max-height: 40px;
+    width: auto;
   }
+  #header #logo h1 a { padding-left: 7px; }
+}
+
+@media (max-width: 380px) {
+  #header #logo h1 { font-size: 17px; }
+  #header #logo img { max-width: 90px; }
+}
+
+/* Subpages share the home page header while keeping their opening content clear. */
+body.services-page #header,
+body.poliuretan-page #header {
+  background: rgba(0, 0, 0, 0.72);
+}
+
+body.services-page .services-page-title { margin-top: 92px; }
+body.poliuretan-page #main { padding-top: 92px !important; }
+body.poliuretan-page #header {
+  height: 92px;
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.78);
+}
+body.poliuretan-page #header #logo h1 {
+  font-size: 26px !important;
+  letter-spacing: 1px !important;
+}
+body.poliuretan-page #header #logo img {
+  width: 125px !important;
+  height: 60px !important;
+}
+@media (max-width: 768px) {
+  body.poliuretan-page #header #logo h1 { font-size: 20px !important; letter-spacing: 0 !important; }
+  body.poliuretan-page #header #logo img { width: auto !important; max-height: 40px !important; }
 }
 
 /*--------------------------------------------------------------
